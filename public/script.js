@@ -8,8 +8,9 @@ var peer = new Peer()
 const myPeer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '3001'
+    port: '443'
 })
+
 const peers= {}
 //get user video and audio
 let myVideoStream;
@@ -118,6 +119,15 @@ const setUnmuteButton = () => {
     document.querySelector('.main_mute_button').innerHTML= html;
 }
 
+const openChat = () =>{
+    console.log('openchat')
+    $('.main__right').toggle();
+}
+
+const leaveMetting = () =>{
+    console.log('leaverroom');
+    document.location.href = "leave_room";
+}
 //stop video
 const playStop = () => {
     const enabled = myVideoStream.getVideoTracks()[0].enabled;
