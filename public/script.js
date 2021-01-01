@@ -10,7 +10,6 @@ const myPeer = new Peer(undefined, {
     host: '/',
     port: '443'
 })
-
 const peers= {}
 //get user video and audio
 let myVideoStream;
