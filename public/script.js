@@ -118,6 +118,15 @@ const setUnmuteButton = () => {
     document.querySelector('.main_mute_button').innerHTML= html;
 }
 
+const copylink = () =>{
+    //console.log('copylink')
+    const textToCopy = $(location).attr("href");
+   navigator.clipboard.writeText(textToCopy)
+  .then(() => { alert(`Copied!`) })
+  .catch((error) => { alert(`Copy failed! ${error}`) })
+    
+}
+
 const openChat = () =>{
     console.log('openchat')
     $('.main__right').toggle();
